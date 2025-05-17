@@ -99,16 +99,16 @@ const IdeaInput = () => {
   };
   
   return (
-    <div className="card">
-      <h2 className="text-2xl font-bold mb-6">
+    <div className="bg-transparent">
+      <h2 className="text-3xl font-extrabold tracking-tight text-black mb-6">
         Buat Ide Konten untuk Setiap Content Pillars
       </h2>
-      <p className="mb-6 text-gray-600">
+      <p className="mb-6 text-gray-700">
         Isi ide untuk setiap Content Pillars yang telah Anda pilih untuk {selectedClient.name}.
       </p>
       
       {selectedPillars.map((pillar, index) => (
-        <div key={pillar.id} className="mb-8 p-4 border rounded-lg">
+        <div key={pillar.id} className="mb-8 p-6 bg-white rounded-xl shadow-md">
           <h3 className="text-xl font-bold mb-2">{pillar.name}</h3>
           <p className="mb-4 text-gray-600">{pillar.description}</p>
           
@@ -116,14 +116,14 @@ const IdeaInput = () => {
             <label className="block mb-2 font-medium">Ide Utama</label>
             <div className="relative">
               <textarea
-                className="textarea h-24 pr-12"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition h-24 pr-12"
                 placeholder={`Jelaskan ide utama Anda untuk ${pillar.name}...`}
                 value={pillarIdeas[pillar.id]?.mainIdea || ''}
                 onChange={(e) => handleInputChange(pillar.id, 'mainIdea', e.target.value)}
               />
               <button
                 type="button"
-                className="absolute right-2 top-2 bg-primary text-white p-2 rounded-full hover:bg-primary/90 transition-colors"
+                className="absolute right-2 top-2 bg-black text-white p-2 rounded-full hover:bg-primary hover:text-black transition-colors duration-300"
                 onClick={() => handleSuggestions(pillar, 'mainIdea')}
                 disabled={loadingPillar === `${pillar.id}-mainIdea`}
                 title="Get AI suggestion"
@@ -136,10 +136,6 @@ const IdeaInput = () => {
               </button>
             </div>
           </div>
-          
-          {/* Post format selection removed as requested */}
-          
-          {/* Removed the separate suggestions button and display */}
         </div>
       ))}
       

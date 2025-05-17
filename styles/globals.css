@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* RevoU-inspired custom colors */
+  --primary: #fcdc3b;       /* Yellow */
+  --primary-hover: #e0b800;
+  --accent-dark: #111111;
+  --accent-gray: #2d2d2d;
+  --accent-light: #fafafa;
+}
 
 @layer base {
   html {
@@ -12,37 +24,40 @@
     @apply bg-light text-dark;
   }
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-4xl font-extrabold tracking-tight;
   }
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-3xl font-bold;
   }
   h3 {
-    @apply text-xl font-bold;
+    @apply text-2xl font-bold;
   }
 }
 
 @layer components {
   .btn {
-    @apply px-4 py-2 rounded-md font-medium transition-colors;
+    @apply px-4 py-3 rounded-lg font-bold transition-colors duration-300;
   }
   .btn-primary {
-    @apply bg-primary text-white hover:bg-primary/90;
+    @apply bg-black text-white hover:bg-primary hover:text-black;
   }
   .btn-secondary {
-    @apply bg-secondary text-white hover:bg-secondary/90;
-  }
-  .btn-accent {
-    @apply bg-accent text-white hover:bg-accent/90;
+    @apply bg-primary text-black hover:bg-primary-hover;
   }
   .card {
-    @apply bg-white rounded-lg shadow-md p-6;
+    @apply bg-white rounded-2xl shadow-xl p-8;
   }
   .input {
-    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition;
   }
   .textarea {
-    @apply w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-black transition;
+  }
+  .gradient-bg {
+    @apply bg-gradient-to-br from-yellow-300 via-yellow-200 to-yellow-400;
+  }
+  .gradient-bg-blue {
+    @apply bg-gradient-to-b from-blue-50 to-purple-100;
   }
 }
 
@@ -64,4 +79,13 @@
 
 .calendar-post {
   @apply border-l-4 p-3 my-2 rounded-r-lg;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }

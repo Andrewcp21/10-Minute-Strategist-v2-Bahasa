@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAppContext } from '../context/AppContext';
 
 const PillarSelection = () => {
-  const { selectedClient, selectedPillars, setSelectedPillars, setStep } = useAppContext();
+  const { selectedClient, selectedPillars, setSelectedPillars, setStep, startTimer } = useAppContext();
   
   if (!selectedClient) {
     return <div>Tidak ada klien yang dipilih. Silakan kembali dan pilih klien.</div>;
@@ -20,6 +20,8 @@ const PillarSelection = () => {
   
   const handleContinue = () => {
     if (selectedPillars.length >= 3) {
+      // Start the timer when moving to ideaInput
+      startTimer();
       setStep('ideaInput');
     }
   };
