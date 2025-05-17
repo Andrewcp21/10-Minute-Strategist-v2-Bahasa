@@ -5,13 +5,13 @@ const graduates = [
     company: "Hakuhodo International Indonesia",
     image: "/graduates/GAP.jpg",
     profileLink: "https://www.linkedin.com/in/divapremas/",
-    logo: "/graduates/GAPlogo.png"
+    logo: "/graduates/GAPlogo.jpg"
   },
   {
     name: "Nathasya Magdalena",
     job: "Social Media Executive",
     company: "Dentsu Creative",
-    image: "/graduates/Natahasya.jpg",
+    image: "/graduates/Nathasya.jpg",
     profileLink: "https://www.linkedin.com/in/nathasya-magdalena/",
     logo: "/graduates/Nathasyalogo.jpg"
   },
