@@ -1,51 +1,51 @@
 const graduates = [
   {
-    name: "Albert Setiawan Tanojo",
-    job: "Performance Marketing - PPC Specialist",
-    company: "Optik Melawai (PT Inti Citra Agung)",
-    image: "/graduates/what.png",
-    profileLink: "https://www.linkedin.com/in/albert-setiawan-tanojo/",
-    logo: "/graduates/melawai.png"
+    name: "G.A.P Diva Prema Shanti",
+    job: "Social Media Excutive ",
+    company: "Hakuhodo International Indonesia",
+    image: "/graduates/GAP.jpg",
+    profileLink: "https://www.linkedin.com/in/divapremas/",
+    logo: "/graduates/GAPlogo.png"
   },
   {
-    name: "Giska Adilah Sharfina Saputra",
-    job: "Performance Marketing ",
-    company: "ALAMI GROUP (Alami Sharia & Hijra Bank)",
-    image: "/graduates/Giska_Adilah.jpeg",
-    profileLink: "https://linkedin.com/in/raka",
-    logo: "/graduates/giska_logo.png"
+    name: "Nathasya Magdalena",
+    job: "Social Media Executive",
+    company: "Dentsu Creative",
+    image: "/graduates/Natahasya.jpg",
+    profileLink: "https://www.linkedin.com/in/nathasya-magdalena/",
+    logo: "/graduates/Nathasyalogo.jpg"
   },
   {
-    name: "Kevin Winoto",
-    job: "Digital Marketing Executive",
-    company: "Aryaduta Hotel Group",
-    image: "/graduates/Kevin_Winoto.jpeg",
-    profileLink: "https://www.linkedin.com/in/kevin-winoto-2616a111b",
-    logo: "/graduates/kevin_logo.jpeg"
-  },
-  {
-    name: "Dea Refika Nita",
-    job: "Digital Marketing Associate",
-    company: "Eratani",
-    image: "/graduates/dea.jpg",
-    profileLink: "https://www.linkedin.com/in/dearefikanita/",
-    logo: "/graduates/eratani.png"
-  },
-  {
-    name: "Adin Istiarsa",
-    job: "Digital Performance Marketing",
-    company: "Heavenly Blush",
-    image: "/graduates/adins.jpeg",
+    name: "Arief Esha Nugroho",
+    job: "Marketing Communication Lead",
+    company: "Walking Drums",
+    image: "/graduates/Arief.jpg",
     profileLink: "https://www.linkedin.com/in/adin-istiarsa/",
-    logo: "/graduates/heavenly.jpeg"
+    logo: "/graduates/AriefLogo.jpg"
   },
   {
-    name: "John Steven",
-    job: "Performance Marketing & Digital Ads Specialist",
-    company: "PT Alam Sutera Realty, Tbk.",
-    image: "/graduates/steve.jpeg",
-    profileLink: "https://www.linkedin.com/in/johnstevenlie/",
-    logo: "/graduates/alam.png"
+    name: "Elfathina Risti",
+    job: "Social Media Specialist",
+    company: "PT.Global Urban Esensial (Dexa Group)",
+    image: "/graduates/Elfathina.jpeg",
+    profileLink: "https://www.linkedin.com/in/elfathina/",
+    logo: "/graduates/Elfathina-logo.png"
+  },
+  {
+    name: "Shinta Dwi Rinawanti",
+    job: "Social Media Specialist",
+    company: "PT Human Mandiri Indonesia",
+    image: "/graduates/Shinta.jpg",
+    profileLink: "https://www.linkedin.com/in/shintadwirinawanti/",
+    logo: "/graduates/Shintalogo.jpg"
+  },
+  {
+    name: "Isma Arifin",
+    job: "Social Media Specialist",
+    company: "TIEC (The International English Center)",
+    image: "/graduates/Isma.jpeg",
+    profileLink: "https://www.linkedin.com/in/isma-arifin/",
+    logo: "/graduates/Ismalogo.jpeg"
   }
 ];
 
