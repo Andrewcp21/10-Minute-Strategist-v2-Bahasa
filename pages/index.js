@@ -22,7 +22,7 @@ export default function Home() {
       <Head>
         <title>10-Minute Strategist</title>
         <meta name="description" content="Train to think like a Social Media Strategist" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/Revou-alasan.original.png" />
       </Head>
 
       <main className="container mx-auto px-4 py-8 max-w-5xl">
