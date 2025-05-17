@@ -10,9 +10,10 @@ import CalendarGeneration from '../components/CalendarGeneration';
 import CalendarReview from '../components/CalendarReview';
 import Feedback from '../components/Feedback';
 import Timer from '../components/Timer';
+import PasswordProtection from '../components/PasswordProtection';
 
 export default function Home() {
-  const { step, timerActive } = useAppContext();
+  const { isAuthenticated, step, timerActive } = useAppContext();
 
   // Determine if we should use the gradient background
   const useGradientBg = step === 'welcome' || step === 'clientSelection' || step === 'ideaInput';
@@ -25,30 +26,37 @@ export default function Home() {
         <link rel="icon" href="/Revou-alasan.original.png" />
       </Head>
 
-      <main className="container mx-auto px-4 py-8 max-w-5xl">
-        <header className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-black">10-Minute Strategist</h1>
-          {timerActive && (
-            <div className="bg-white px-4 py-2 rounded-lg shadow-md">
-              <Timer />
-            </div>
-          )}
-        </header>
+      {!isAuthenticated ? (
+        <PasswordProtection />
+      ) : (
+        <>
+          <main className="container mx-auto px-4 py-8 max-w-5xl">
+            <header className="flex justify-between items-center mb-8">
+              <h1 className="text-3xl font-bold text-black">10-Minute Strategist</h1>
+              {timerActive && (
+                <div className="bg-white px-4 py-2 rounded-lg shadow-md">
+                  <Timer />
+                </div>
+              )}
+            </header>
 
-        {/* Render the appropriate component based on the current step */}
-        {step === 'welcome' && <Welcome />}
-        {step === 'clientSelection' && <ClientSelection />}
-        {step === 'briefReview' && <BriefReview />}
-        {step === 'pillarSelection' && <PillarSelection />}
-        {step === 'ideaInput' && <IdeaInput />}
-        {step === 'calendarGeneration' && <CalendarGeneration />}
-        {step === 'calendarReview' && <CalendarReview />}
-        {step === 'feedback' && <Feedback />}
-      </main>
+            {/* Render the appropriate component based on the current step */}
+            {step === 'welcome' && <Welcome />}
+            {step === 'clientSelection' && <ClientSelection />}
+            {step === 'briefReview' && <BriefReview />}
+            {step === 'pillarSelection' && <PillarSelection />}
+            {step === 'ideaInput' && <IdeaInput />}
+            {step === 'calendarGeneration' && <CalendarGeneration />}
+            {step === 'calendarReview' && <CalendarReview />}
+            {step === 'feedback' && <Feedback />}
+          </main>
 
-      <footer className="py-6 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} 10-Minute Strategist
-      </footer>
+          <footer className="py-6 text-center text-gray-500 text-sm">
+            &copy; {new Date().getFullYear()} 10-Minute Strategist
+          </footer>
+        </>
+      )}
+
     </div>
   );
 }

@@ -3,6 +3,9 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 const AppContext = createContext();
 
 export function AppProvider({ children }) {
+  // Authentication state
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+
   // Game state
   const [step, setStep] = useState('welcome'); // welcome, clientSelection, briefReview, pillarSelection, ideaInput, calendarGeneration, calendarReview, feedback
   const [userName, setUserName] = useState('');
@@ -85,6 +88,8 @@ export function AppProvider({ children }) {
   return (
     <AppContext.Provider
       value={{
+        isAuthenticated,
+        setIsAuthenticated,
         step,
         setStep,
         timeRemaining,
